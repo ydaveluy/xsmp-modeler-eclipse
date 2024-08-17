@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension
+		id="org.eclipse.xsmp.contentTypes"
+		name="Xsmp ContentType"
+		point="org.eclipse.core.contenttype.contentTypes">
+		<content-type
+			base-type="org.eclipse.wildwebdeveloper.parent"
+			file-extensions="xsmpcat"
+			id="org.eclipse.xsmp.xsmpcat"
+			name="XsmpCat"
+			priority="normal">
+		</content-type>
+		<content-type
+        base-type="org.eclipse.wildwebdeveloper.parent"
+        file-extensions="tool,profile"
+        file-names="xsmp.project"
+        id="org.eclipse.xsmp.project"
+        name="XsmpProject"
+        priority="normal">
+		</content-type>
+	</extension>
+	<extension point="org.eclipse.ui.genericeditor.icons">
+		<icon contentType="org.eclipse.xsmp.xsmpcat"
+			icon="node_modules/xsmp-modeler/icons/xsmp.png" />
+		<icon contentType="org.eclipse.xsmp.project"
+			icon="node_modules/xsmp-modeler/icons/xsmpproject.png" />
+	</extension>
+	<extension
+		point="org.eclipse.lsp4e.languageServer">
+		<server
+			class="org.eclipse.xsmp.XsmpLanguageServer"
+			id="org.eclipse.xsmp.server"
+			label="Xsmp">
+		</server>
+		<contentTypeMapping
+			contentType="org.eclipse.xsmp.xsmpcat"
+			id="org.eclipse.xsmp.server">
+		</contentTypeMapping>
+		<contentTypeMapping
+			contentType="org.eclipse.xsmp.project"
+			id="org.eclipse.xsmp.server">
+		</contentTypeMapping>
+	</extension>
+
+	<extension
+		point="org.eclipse.tm4e.registry.grammars">
+		<grammar
+			path="node_modules/xsmp-modeler/syntaxes/xsmpcat.tmLanguage.json"
+			scopeName="source.xsmpcat">
+		</grammar>
+		<scopeNameContentTypeBinding
+			contentTypeId="org.eclipse.xsmp.xsmpcat"
+			scopeName="source.xsmpcat">
+		</scopeNameContentTypeBinding>
+		<grammar
+			path="node_modules/xsmp-modeler/syntaxes/xsmpproject.tmLanguage.json"
+			scopeName="source.xsmpproject">
+		</grammar>
+		<scopeNameContentTypeBinding
+			contentTypeId="org.eclipse.xsmp.project"
+			scopeName="source.xsmpproject">
+		</scopeNameContentTypeBinding>
+	</extension>
+
+	<extension
+		point="org.eclipse.tm4e.languageconfiguration.languageConfigurations">
+		<languageConfiguration
+			contentTypeId="org.eclipse.xsmp.xsmpcat"
+			path="node_modules/xsmp-modeler/xsmpcat-language-configuration.json">
+		</languageConfiguration>
+		<languageConfiguration
+			contentTypeId="org.eclipse.xsmp.project"
+			path="node_modules/xsmp-modeler/xsmpproject-language-configuration.json">
+		</languageConfiguration>
+	</extension>
+ <extension
+       point="org.eclipse.core.filesystem.filesystems">
+    <filesystem
+          scheme="builtin">
+       <run
+             class="org.eclipse.xsmp.XsmpBuiltinFileSystem">
+       </run>
+    </filesystem>
+ </extension>
+</plugin>

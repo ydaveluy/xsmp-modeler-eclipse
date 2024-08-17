@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.xsmp.feature"
+      label="Xsmp Eclipse Editor"
+      version="1.0.1.qualifier"
+      plugin="org.eclipse.xsmp">
+
+   <description>
+      Editor for the Xsmp Language.
+   </description>
+
+   <plugin
+         id="org.eclipse.xsmp"
+         version="0.0.0"/>
+
+</feature>
