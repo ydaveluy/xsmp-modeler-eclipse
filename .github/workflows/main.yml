@@ -22,7 +22,7 @@ jobs:
        uses: s4u/setup-maven-action@v1.14.0
     # Maven build start
     - name: Cache Maven packages
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
