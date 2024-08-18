@@ -18,7 +18,8 @@ jobs:
       with:
         java-version: 17
         distribution: adopt
-
+    -  name: Setup Maven Action
+       uses: s4u/setup-maven-action@v1.14.0
     # Maven build start
     - name: Cache Maven packages
       uses: actions/cache@v2
