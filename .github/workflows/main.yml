@@ -17,7 +17,7 @@ jobs:
       uses: actions/setup-java@v4
       with:
         java-version: 17
-        distribution: adopt
+        distribution: temurin
     -  name: Setup Maven Action
        uses: s4u/setup-maven-action@v1.14.0
     # Maven build start
