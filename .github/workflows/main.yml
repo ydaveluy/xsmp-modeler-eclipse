@@ -32,7 +32,7 @@ jobs:
         mvn clean package
         cp releng/repository/repo-index.html releng/repository/target/repository/index.html
     - name: Archive P2 Repository
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: p2-update-site
         path: |
