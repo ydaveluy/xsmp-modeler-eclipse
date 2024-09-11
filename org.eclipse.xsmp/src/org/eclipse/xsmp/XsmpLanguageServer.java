@@ -1,4 +1,3 @@
-
 package org.eclipse.xsmp;
 
 import java.io.IOException;
@@ -14,9 +13,6 @@ import org.eclipse.lsp4e.server.ProcessStreamConnectionProvider;
 import org.eclipse.lsp4e.server.StreamConnectionProvider;
 import org.eclipse.wildwebdeveloper.embedder.node.NodeJSManager;
 
-/**
- * @author dhuebner
- */
 public class XsmpLanguageServer extends ProcessStreamConnectionProvider
         implements StreamConnectionProvider
 {

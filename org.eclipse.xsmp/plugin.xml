@@ -9,16 +9,16 @@
 			base-type="org.eclipse.wildwebdeveloper.parent"
 			file-extensions="xsmpcat"
 			id="org.eclipse.xsmp.xsmpcat"
-			name="XsmpCat"
+			name="Xsmp Catalogue"
 			priority="normal">
 		</content-type>
 		<content-type
-        base-type="org.eclipse.wildwebdeveloper.parent"
-        file-extensions="tool,profile"
-        file-names="xsmp.project"
-        id="org.eclipse.xsmp.project"
-        name="XsmpProject"
-        priority="normal">
+			base-type="org.eclipse.wildwebdeveloper.parent"
+			file-extensions="tool,profile"
+			file-names="xsmp.project"
+			id="org.eclipse.xsmp.project"
+			name="Xsmp Project"
+			priority="normal">
 		</content-type>
 	</extension>
 	<extension point="org.eclipse.ui.genericeditor.icons">
