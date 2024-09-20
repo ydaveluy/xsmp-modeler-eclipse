@@ -23,8 +23,8 @@ public class XsmpLanguageServer extends ProcessStreamConnectionProvider
     commands.add(NodeJSManager.getNodeJsLocation().getAbsolutePath());
     try
     {
-      final var url = FileLocator
-              .toFileURL(getClass().getResource("/node_modules/xsmp-modeler/out/language/main.js"));
+      final var url = FileLocator.toFileURL(
+              getClass().getResource("/node_modules/xsmp-modeler/out/language/main.cjs"));
       commands.add(new java.io.File(url.getPath()).getAbsolutePath());
       commands.add("--stdio");
       setCommands(commands);

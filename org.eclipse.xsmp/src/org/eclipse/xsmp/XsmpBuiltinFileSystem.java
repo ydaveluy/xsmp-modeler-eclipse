@@ -14,7 +14,6 @@ import org.eclipse.core.runtime.Path;
 @SuppressWarnings("restriction")
 public class XsmpBuiltinFileSystem extends FileSystem
 {
-
   @Override
   public IFileStore getStore(URI uri)
   {
@@ -24,7 +23,13 @@ public class XsmpBuiltinFileSystem extends FileSystem
               .getResource("/node_modules/xsmp-modeler/out/lib/" + uri.getSchemeSpecificPart()));
       if (url != null)
       {
-        return new LocalFile(new File(url.getFile()));
+        return new LocalFile(new File(url.getFile())) {
+          @Override
+          public URI toURI()
+          {
+            return uri;
+          }
+        };
       }
     }
     catch (final IOException e)
