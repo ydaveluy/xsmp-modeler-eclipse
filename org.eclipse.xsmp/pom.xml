@@ -45,7 +45,7 @@
 							<connectionUrl>
 								scm:git:https://github.com/ydaveluy/xsmp-modeler.git</connectionUrl>
 							<scmVersionType>tag</scmVersionType>
-							<scmVersion>v0.0.7</scmVersion>
+							<scmVersion>v0.0.9</scmVersion>
 							<basedir>${project.build.directory}</basedir>
 							<checkoutDirectory>
 								${project.build.directory}/xsmp</checkoutDirectory>
